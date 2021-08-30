@@ -36,18 +36,14 @@ if (typeof sharinglink === 'undefined' || sharinglink === null)
 
 function showHostView()
 {
-    //document.getElementById("sharinglink").hidden = false;
-    //document.getElementById("sharingbutton").hidden = false;
-    document.getElementById("sharinglink").style.display = "none";
-    document.getElementById("sharingbutton").style.display = "none";
+    document.getElementById("sharinglink").hidden = false;
+    document.getElementById("sharingbutton").hidden = false;
 }
 
 function showAttendeeView()
 {
-    //document.getElementById("sharinglink").hidden = true;
-    //document.getElementById("sharingbutton").hidden = true;
-    document.getElementById("sharinglink").style.display = "block";
-    document.getElementById("sharingbutton").style.display = "block";
+    document.getElementById("sharinglink").hidden = true;
+    document.getElementById("sharingbutton").hidden = true;
 }
 
 window.onkeyup = keyup;
