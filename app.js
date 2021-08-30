@@ -57,6 +57,11 @@ function keyup(e) {
     SHARE_LINK = e.target.value;
 }
 
+function shareLink()
+{
+    setShareUrl();
+}
+
 function setShareUrl() 
   {
     var internalUrl = "https://comingzero.github.io/onlinedocumentsharing/?sharinglink=" + SHARE_LINK;
