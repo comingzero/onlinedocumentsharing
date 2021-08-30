@@ -49,11 +49,8 @@ function showHostView()
 
 function showAttendeeView()
 {
-    //document.getElementById("sharinglink").hidden = true;
-    //document.getElementById("sharingbutton").hidden = true;
-
-    document.getElementById("sharinglink").style.display = "none";
-    document.getElementById("sharingbutton").style.display = "none";
+    document.getElementById("sharinglink").hidden = true;
+    document.getElementById("sharingbutton").hidden = true;
     window.location.replace(SHARE_LINK, "_self");
 }
 
