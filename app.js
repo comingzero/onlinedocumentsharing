@@ -29,10 +29,9 @@ var hostLink = window.location;
             app.on("application:shareStateChanged", function (isShared) {
                 if (true == isShared) {
                     hostLink = window.location;
-                    window.location.replace(SHARE_LINK, "_self");
+                    window.open(SHARE_LINK);
                 } else {
                     document.getElementById("sharingbutton").hidden = false;
-                    window.location.replace(hostLink, "_self");
                 }
             });
         }).catch(function (reason) {
