@@ -47,7 +47,7 @@ function showAttendeeView()
 
     document.getElementById("sharinglink").style.display = "none";
     document.getElementById("sharingbutton").style.display = "none";
-    window.location.replace(sharinglink, "_self");
+    window.location.replace(SHARE_LINK, "_self");
 }
 
 window.onkeyup = keyup;
@@ -72,6 +72,7 @@ function setShareUrl()
     app.setShareUrl(internalUrl, externalUrl, title, opt)
       .then(function (res) {
         log("Promise setShareUrl success", JSON.stringify(res));
+        window.location.replace(SHARE_LINK, "_self");
       })
       .catch(function (reason) {
         log("setShareUrl: fail reason=" + reason);
