@@ -9,6 +9,7 @@ if (typeof sharinglink === 'undefined' || sharinglink === null)
     SHARE_LINK = sharinglink;
 }
 
+var hostLink = window.location;
 
 (function initialize(){
     app = new window.Webex.Application();
@@ -27,9 +28,11 @@ if (typeof sharinglink === 'undefined' || sharinglink === null)
         app.listen().then(function () {
             app.on("application:shareStateChanged", function (isShared) {
                 if (true == isShared) {
+                    hostLink = window.location;
                     window.location.replace(SHARE_LINK, "_self");
                 } else {
                     document.getElementById("sharingbutton").hidden = false;
+                    window.location.replace(hostLink, "_self");
                 }
             });
         }).catch(function (reason) {
