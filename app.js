@@ -6,6 +6,10 @@ const urlParams = new URLSearchParams(queryString);
 const sharinglink = urlParams.get('sharinglink');
 if (typeof sharinglink === 'undefined' || sharinglink === null) 
 {
+    log('luanch', {message:'host'});
+}
+else
+{
     SHARE_LINK = sharinglink;
 }
 
