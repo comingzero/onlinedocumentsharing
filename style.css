@@ -1,6 +1,7 @@
 body {
     padding-top: 100px;
-    padding-left: 30;
+    padding-left: 5%;
+    padding-right: 5%;
     box-sizing: border-box;
     font-family: monospace;
     display: flex;
