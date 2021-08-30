@@ -26,6 +26,11 @@ if (typeof sharinglink === 'undefined' || sharinglink === null)
 
         app.listen().then(function () {
             app.on("application:shareStateChanged", function (isShared) {
+                if (true == isShared) {
+                    window.location.replace(SHARE_LINK, "_self");
+                } else {
+                    document.getElementById("sharingbutton").hidden = false;
+                }
             });
         }).catch(function (reason) {
             log("listen: fail reason=" + reason);
@@ -72,7 +77,7 @@ function setShareUrl()
     app.setShareUrl(internalUrl, externalUrl, title, opt)
       .then(function (res) {
         log("Promise setShareUrl success", JSON.stringify(res));
-        window.location.replace(SHARE_LINK, "_self");
+        document.getElementById("sharingbutton").hidden = true;
       })
       .catch(function (reason) {
         log("setShareUrl: fail reason=" + reason);
