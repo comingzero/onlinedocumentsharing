@@ -42,8 +42,12 @@ function showHostView()
 
 function showAttendeeView()
 {
-    document.getElementById("sharinglink").hidden = true;
-    document.getElementById("sharingbutton").hidden = true;
+    //document.getElementById("sharinglink").hidden = true;
+    //document.getElementById("sharingbutton").hidden = true;
+
+    document.getElementById("sharinglink").style.display = "none";
+    document.getElementById("sharingbutton").style.display = "none";
+    window.location.replace(sharinglink, "_self");
 }
 
 window.onkeyup = keyup;
